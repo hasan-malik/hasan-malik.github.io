@@ -8,12 +8,34 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #ffffff;
-  color: #1D1D1F;
+  background-color: #09090f;
+  color: #f5f5f7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50%       { opacity: 0.7; }
+}
+
+@keyframes shooting {
+  0%   { transform: translateX(0) translateY(0) rotate(-42deg); opacity: 0; }
+  4%   { opacity: 1; }
+  35%  { transform: translateX(440px) translateY(440px) rotate(-42deg); opacity: 0; }
+  100% { transform: translateX(440px) translateY(440px) rotate(-42deg); opacity: 0; }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 130px;
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(255,255,255,0.85), transparent);
+  border-radius: 9999px;
+  animation: shooting 8s linear infinite;
+  opacity: 0;
 }

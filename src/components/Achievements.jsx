@@ -6,8 +6,9 @@ const achievements = [
     title: "World's Youngest Sports Author",
     subtitle: 'Guinness World Record · 2024',
     detail:
-      'Published "Ten Moments That Changed Cricket" — 26,000 words, 130+ pages. Available at Walmart, Barnes & Noble, Amazon, and 15+ bookstores worldwide.',
+      'Published "Ten Moments That Changed Cricket" — 26,000 words, 130+ pages. 800 copies available worldwide at Walmart, Barnes & Noble, Amazon, and 15+ bookstores.',
     accent: 'border-l-amber-400',
+    glow: 'hover:border-amber-400/30',
   },
   {
     category: 'ACADEMIC',
@@ -16,6 +17,7 @@ const achievements = [
     detail:
       'Differential Calc 96% · Integral Calc 95% · Computer Organization 91% · Theory of Computation 94% · Intro to CS 97% · Software Design 93% · Intro to Philosophy 93%',
     accent: 'border-l-apple-blue',
+    glow: 'hover:border-apple-blue/30',
   },
   {
     category: 'AWARD',
@@ -24,6 +26,7 @@ const achievements = [
     detail:
       'Medal in Computer Science. Recognized among all Cambridge students across Punjab — one of the largest exam boards globally.',
     accent: 'border-l-violet-400',
+    glow: 'hover:border-violet-400/30',
   },
   {
     category: 'OLYMPIAD',
@@ -32,6 +35,7 @@ const achievements = [
     detail:
       'Team ranked 1st nationally in Robotics and 1st in Biology. Also ranked 2nd in Mathematics at LGS Scienject 2023 — awarded Overall Best Team.',
     accent: 'border-l-emerald-400',
+    glow: 'hover:border-emerald-400/30',
   },
   {
     category: 'DEBATE',
@@ -40,22 +44,25 @@ const achievements = [
     detail:
       '15 national and international MUN awards across Pakistan, Canada, Bahrain, and Indonesia. Trained 40 juniors to win Best Young Delegation at LUMUN 2023.',
     accent: 'border-l-rose-400',
+    glow: 'hover:border-rose-400/30',
   },
   {
     category: 'ACADEMIC',
     title: 'SAT 1580 — 99th Percentile',
     subtitle: 'Among 5,600,000 students worldwide',
     detail:
-      'Also: 1st in Batch at AS Levels 2023 · Most Diligent Prefect · School Prefect · Yearbook Editor · Red Blazer recipient · Club President at Aitchison College.',
+      '1st in Batch at AS Levels 2023 · Most Diligent Prefect · School Prefect · Yearbook Editor · Red Blazer recipient · Club President at Aitchison College.',
     accent: 'border-l-sky-400',
+    glow: 'hover:border-sky-400/30',
   },
   {
     category: 'FOUNDER',
     title: 'The Cricketing Hour',
     subtitle: "Pakistan's Largest Youth-Run Sports Blog · 2023",
     detail:
-      'Over 60 videos covering major cricket news, long-form analyses, and bite-sized Reels. 50,000+ views and 5,000+ followers on Instagram; 5,000+ views on YouTube.',
+      'Over 60 videos covering major cricket news, long-form analyses, and Reels. 50,000+ views and 5,000+ followers on Instagram; 5,000+ views on YouTube.',
     accent: 'border-l-green-400',
+    glow: 'hover:border-green-400/30',
   },
 ]
 
@@ -74,8 +81,9 @@ export default function Achievements() {
           <p className="text-sm font-semibold text-apple-blue tracking-widest uppercase mb-3">
             Recognition
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-apple-dark tracking-tight">
-            Awards & Honours
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            <span className="text-apple-dark">Awards & </span>
+            <span className="text-apple-blue">Honours</span>
           </h2>
         </motion.div>
 
@@ -87,7 +95,7 @@ export default function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className={`p-7 bg-white border border-apple-border rounded-2xl border-l-4 ${item.accent} hover:shadow-lg transition-shadow duration-300`}
+              className={`p-7 bg-apple-light/60 border border-apple-border rounded-2xl border-l-4 ${item.accent} ${item.glow} hover:shadow-lg transition-all duration-300 backdrop-blur-sm`}
             >
               <p className="text-xs font-black text-apple-gray tracking-widest mb-3">
                 {item.category}

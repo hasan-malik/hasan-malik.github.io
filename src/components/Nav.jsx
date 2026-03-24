@@ -13,7 +13,7 @@ export default function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-md border-b border-apple-border'
+          ? 'bg-apple-bg/85 backdrop-blur-md border-b border-apple-border'
           : 'bg-transparent'
       }`}
     >
@@ -26,15 +26,15 @@ export default function Nav() {
         </a>
         <div className="flex items-center gap-8">
           {[
-            { label: 'Work', href: '#work' },
+            { label: 'Work',       href: '#work'       },
             { label: 'Experience', href: '#experience' },
-            { label: 'Recognition', href: '#recognition' },
-            { label: 'Contact', href: '#contact' },
+            { label: 'Recognition',href: '#recognition'},
+            { label: 'Contact',    href: '#contact'    },
           ].map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className="text-sm font-medium text-apple-dark hover:text-apple-blue transition-colors duration-200 hidden sm:block"
+              className="text-sm font-medium text-apple-gray hover:text-apple-dark transition-colors duration-200 hidden sm:block"
             >
               {label}
             </a>

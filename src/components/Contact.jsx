@@ -15,8 +15,9 @@ export default function Contact() {
             <p className="text-sm font-semibold text-apple-blue tracking-widest uppercase mb-3">
               Contact
             </p>
-            <h2 className="text-3xl md:text-4xl font-black text-apple-dark tracking-tight mb-4">
-              Let's talk.
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
+              <span className="text-apple-dark">Let's </span>
+              <span className="text-apple-blue">Talk.</span>
             </h2>
             <a
               href="mailto:hasan.malik@mail.utoronto.ca"
@@ -34,16 +35,16 @@ export default function Contact() {
             className="flex items-center gap-8"
           >
             {[
-              { label: 'GitHub', href: 'https://github.com/hasan-malik' },
-              { label: 'LinkedIn', href: 'https://linkedin.com/in/hasan-malik-/' },
-              { label: 'Resume', href: '/resume.pdf' },
+              { label: 'GitHub',   href: 'https://github.com/hasan-malik'         },
+              { label: 'LinkedIn', href: 'https://linkedin.com/in/hasan-malik-/'   },
+              { label: 'Resume',   href: '/resume.pdf'                              },
             ].map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-apple-dark hover:text-apple-blue transition-colors duration-200"
+                className="text-sm font-semibold text-apple-gray hover:text-apple-blue transition-colors duration-200"
               >
                 {label} ↗
               </a>
