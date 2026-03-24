@@ -10,19 +10,19 @@ const posts = [
     id: 1,
     caption: 'Add your caption here',
     date: 'Month Year',
-    images: Array.from({ length: 9 }, (_, i) => `/gallery/post1/${i + 1}.jpg`),
+    images: Array.from({ length: 2 }, (_, i) => `/gallery/post1/${i + 1}.jpg`),
   },
   {
     id: 2,
     caption: 'Another memorable moment',
     date: 'Month Year',
-    images: Array.from({ length: 9 }, (_, i) => `/gallery/post2/${i + 1}.jpg`),
+    images: Array.from({ length: 2 }, (_, i) => `/gallery/post2/${i + 1}.jpg`),
   },
   {
     id: 3,
     caption: 'Yet another caption',
     date: 'Month Year',
-    images: Array.from({ length: 8 }, (_, i) => `/gallery/post3/${i + 1}.jpg`),
+    images: Array.from({ length: 2 }, (_, i) => `/gallery/post3/${i + 1}.jpg`),
   },
 ]
 
