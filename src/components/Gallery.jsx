@@ -14,9 +14,9 @@ const posts = [
   },
   {
     id: 2,
-    caption: 'Another memorable moment',
-    date: 'Month Year',
-    images: Array.from({ length: 2 }, (_, i) => `/gallery/post2/${i + 1}.jpg`),
+    caption: 'Harmless wrongs.',
+    date: 'February 4, 2024',
+    images: Array.from({ length: 10 }, (_, i) => `/gallery/post2/${i + 1}.jpg`),
   },
   {
     id: 3,
