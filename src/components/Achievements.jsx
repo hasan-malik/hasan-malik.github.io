@@ -30,10 +30,10 @@ const achievements = [
   },
   {
     category: 'OLYMPIAD',
-    title: '1st in Pakistan — Robotics & Biology',
-    subtitle: 'LGS Innoventions 2023 · National Science Olympiad',
+    title: '9 Awards Across 4 Science Olympiads',
+    subtitle: 'LGS Innoventions · LGS Scienject · BLL MADS · ACSEC — 2022–2023',
     detail:
-      'Team ranked 1st nationally in Robotics and 1st in Biology. Also ranked 2nd in Mathematics at LGS Scienject 2023 — awarded Overall Best Team.',
+      'Part of teams that swept 1st place in Computer Science, Mathematics, and Biology (LGS JT Innoventions 2023); 2nd in Astronomy, Math & CS (LGS Scienject 2023); 1st in Crime-Solving + Best Science Team overall (BLL MADS 2022). Personally headed Psychology at ACSEC 2023.',
     accent: 'border-l-emerald-400',
     glow: 'hover:border-emerald-400/30',
   },
