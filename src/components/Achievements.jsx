@@ -4,7 +4,7 @@ const achievements = [
   {
     category: 'WORLD RECORD',
     title: "World's Youngest Sports Author",
-    subtitle: 'Guinness World Record · 2024',
+    subtitle: 'World Record · 2024',
     detail:
       'Published "Ten Moments That Changed Cricket" — 26,000 words, 130+ pages. 800 copies available worldwide at Walmart, Barnes & Noble, Amazon, and 15+ bookstores.',
     accent: 'border-l-amber-400',

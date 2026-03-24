@@ -29,6 +29,7 @@ export default function Nav() {
             { label: 'Work',       href: '#work'       },
             { label: 'Experience', href: '#experience' },
             { label: 'Recognition',href: '#recognition'},
+            { label: 'Gallery',    href: '#gallery'    },
             { label: 'Contact',    href: '#contact'    },
           ].map(({ label, href }) => (
             <a
