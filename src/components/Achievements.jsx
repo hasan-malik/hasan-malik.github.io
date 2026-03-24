@@ -30,10 +30,10 @@ const achievements = [
   },
   {
     category: 'OLYMPIAD',
-    title: '9 Awards Across 4 National Science Olympiads',
-    subtitle: 'LGS Innoventions · LGS Scienject · BLL MADS · ACSEC — 2022–2023',
+    title: '1st Place — CS, Mathematics & Biology',
+    subtitle: '9 Awards · 4 National Science Olympiads · 2022–2023',
     detail:
-      'Part of teams that swept 1st place in Computer Science, Mathematics, and Biology (LGS JT Innoventions 2023); 2nd in Astronomy, Math & CS (LGS Scienject 2023); 1st in Crime-Solving + Best Science Team overall (BLL MADS 2022). Personally headed Psychology at ACSEC 2023.',
+      'Gold in Computer Science, Mathematics, and Biology at LGS JT Innoventions. 1st in Crime-Solving and Best Science Team Award at BLL MADS. Placed 2nd in Astronomy, Math, and CS at LGS Scienject. Led the Psychology category at ACSEC. Competed across 6 disciplines as part of Aitchison College\'s science team.',
     accent: 'border-l-emerald-400',
     glow: 'hover:border-emerald-400/30',
   },
