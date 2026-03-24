@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 const posts = [
   {
     id: 1,
-    caption: 'Add your caption here',
-    date: 'Month Year',
-    images: Array.from({ length: 2 }, (_, i) => `/gallery/post1/${i + 1}.jpg`),
+    caption: 'Still chasing it',
+    date: 'January 13, 2026',
+    images: Array.from({ length: 9 }, (_, i) => `/gallery/post1/${i + 1}.jpg`),
   },
   {
     id: 2,
