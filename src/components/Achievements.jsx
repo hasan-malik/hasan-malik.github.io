@@ -30,7 +30,7 @@ const achievements = [
   },
   {
     category: 'OLYMPIAD',
-    title: '9 Awards Across 4 Science Olympiads',
+    title: '9 Awards Across 4 National Science Olympiads',
     subtitle: 'LGS Innoventions · LGS Scienject · BLL MADS · ACSEC — 2022–2023',
     detail:
       'Part of teams that swept 1st place in Computer Science, Mathematics, and Biology (LGS JT Innoventions 2023); 2nd in Astronomy, Math & CS (LGS Scienject 2023); 1st in Crime-Solving + Best Science Team overall (BLL MADS 2022). Personally headed Psychology at ACSEC 2023.',
