@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import SignatureWatermark from './SignatureWatermark'
-import GitHubActivity from './GitHubActivity'
 
 export default function Contact() {
   return (
@@ -57,12 +56,9 @@ export default function Contact() {
 
         </div>
 
-        <div className="mt-16 pt-8 border-t border-apple-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div>
-            <span className="text-sm font-bold text-apple-dark block">Hasan Malik</span>
-            <span className="text-sm text-apple-gray">CS @ University of Toronto · 2028</span>
-          </div>
-          <GitHubActivity />
+        <div className="mt-16 pt-8 border-t border-apple-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+          <span className="text-sm font-bold text-apple-dark">Hasan Malik</span>
+          <span className="text-sm text-apple-gray">CS @ University of Toronto · 2028</span>
         </div>
 
       </div>
