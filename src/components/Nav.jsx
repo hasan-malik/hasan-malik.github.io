@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useMatch } from 'react-router-dom'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
-  const location = useLocation()
+  const isGallery = !!useMatch('/gallery')
   const navigate = useNavigate()
-  const isGallery = location.pathname === '/gallery'
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -23,12 +22,12 @@ export default function Nav() {
     >
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => navigate('/')}
+          <Link
+            to="/"
             className="text-apple-dark font-bold text-lg tracking-tight hover:text-apple-blue transition-colors duration-200"
           >
             HM
-          </button>
+          </Link>
           {isGallery && (
             <>
               <span className="text-apple-border text-lg">/</span>
@@ -39,18 +38,18 @@ export default function Nav() {
 
         <div className="flex items-center gap-8">
           {!isGallery && [
-            { label: 'Work',        href: '#work'        },
-            { label: 'Experience',  href: '#experience'  },
-            { label: 'Recognition', href: '#recognition' },
-            { label: 'Contact',     href: '#contact'     },
-          ].map(({ label, href }) => (
-            <a
+            { label: 'Work',        to: '/#work'        },
+            { label: 'Experience',  to: '/#experience'  },
+            { label: 'Recognition', to: '/#recognition' },
+            { label: 'Contact',     to: '/#contact'     },
+          ].map(({ label, to }) => (
+            <Link
               key={label}
-              href={href}
+              to={to}
               className="text-sm font-medium text-apple-gray hover:text-apple-dark transition-colors duration-200 hidden sm:block"
             >
               {label}
-            </a>
+            </Link>
           ))}
 
           <button
