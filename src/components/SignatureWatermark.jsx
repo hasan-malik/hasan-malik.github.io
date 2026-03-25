@@ -73,7 +73,7 @@ export default function SignatureWatermark() {
       preserveAspectRatio="xMidYMid meet"
       aria-hidden="true"
       initial={{ opacity: 0 }}
-      animate={{ opacity: [0, 0.22, 0.22, 0.07] }}
+      animate={{ opacity: [0, 0.22, 0.22, 0.03] }}
       transition={{ duration: 9, times: [0, 0.05, 0.65, 1], ease: 'linear' }}
     >
       {STROKES.map((s, i) => (
