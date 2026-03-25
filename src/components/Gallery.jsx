@@ -291,6 +291,7 @@ export default function Gallery({ onBack }) {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
+          <p className="text-sm font-semibold text-apple-blue tracking-widest uppercase mb-3">Gallery</p>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight">
             <span className="text-apple-dark">A little bit of </span>
             <span className="text-apple-blue">everything.</span>
