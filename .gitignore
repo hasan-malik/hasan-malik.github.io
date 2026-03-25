@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Apple image formats (not web-compatible)
+*.heic
+*.HEIC
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
