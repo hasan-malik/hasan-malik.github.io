@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
+import SignatureWatermark from './SignatureWatermark'
 
 export default function Contact() {
   return (
     <footer id="contact" className="py-20 border-t border-apple-border">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -26,6 +27,8 @@ export default function Contact() {
               hasan.malik@mail.utoronto.ca
             </a>
           </motion.div>
+
+          <SignatureWatermark className="hidden md:block w-72 h-36" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

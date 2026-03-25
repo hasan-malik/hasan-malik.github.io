@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 const STROKES = [
   { d: 'M 52.25 270.00 C 52.21 270.08 51.92 270.29 52.00 270.50 C 52.08 270.71 52.21 271.00 52.75 271.25 C 53.29 271.50 53.50 271.83 55.25 272.00 C 57.00 272.17 60.75 272.46 63.25 272.25 C 65.75 272.04 67.50 271.75 70.25 270.75 C 73.00 269.75 78.17 267.00 79.75 266.25', delay: 0.0, dur: 0.08 },
@@ -65,16 +66,25 @@ const STROKES = [
   { d: 'M 317.75 195.25 L 318.00 194.75', delay: 3.459, dur: 0.052 },
 ]
 
-export default function SignatureWatermark() {
+const CYCLE_DURATION = 5000  // ms — 3.5s draw + 1.5s pause before restart
+
+export default function SignatureWatermark({ className = '' }) {
+  const [cycle, setCycle] = useState(0)
+
+  useEffect(() => {
+    const id = setTimeout(() => setCycle(c => c + 1), CYCLE_DURATION)
+    return () => clearTimeout(id)
+  }, [cycle])
+
   return (
     <motion.svg
-      viewBox="0 0 400 400"
-      className="absolute inset-0 w-full h-full pointer-events-none select-none"
+      key={cycle}
+      viewBox="40 100 285 200"
+      className={`pointer-events-none select-none ${className}`}
       preserveAspectRatio="xMidYMid meet"
       aria-hidden="true"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: [0, 0.22, 0.22, 0.03] }}
-      transition={{ duration: 9, times: [0, 0.05, 0.65, 1], ease: 'linear' }}
+      animate={{ opacity: [0, 1, 1, 0] }}
+      transition={{ duration: CYCLE_DURATION / 1000, times: [0, 0.08, 0.82, 1], ease: 'linear' }}
     >
       {STROKES.map((s, i) => (
         <motion.path

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import SignatureWatermark from './SignatureWatermark'
 
 const badges = [
   { label: '4.00 GPA',            sub: 'University of Toronto'       },
@@ -17,7 +16,6 @@ const fadeUp = (delay = 0) => ({
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-20">
-      <SignatureWatermark />
       <div className="relative z-10 max-w-5xl mx-auto px-6 w-full">
 
         <motion.p
