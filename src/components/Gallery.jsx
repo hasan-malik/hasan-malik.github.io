@@ -237,40 +237,47 @@ function PostCard({ post, index, onOpen }) {
 
 // ─── GALLERY SECTION ─────────────────────────────────────────────────────────
 
-export default function Gallery() {
-  const [lightbox, setLightbox] = useState(null) // { post, index }
+export default function Gallery({ onBack }) {
+  const [lightbox, setLightbox] = useState(null)
 
   const openLightbox  = (post, index) => setLightbox({ post, index })
   const closeLightbox = useCallback(() => setLightbox(null), [])
 
   return (
-    <section id="gallery" className="py-28">
+    <section className="min-h-screen pt-32 pb-28">
       <div className="max-w-5xl mx-auto px-6">
 
+        {/* Page header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
+          {onBack && (
+            <button
+              onClick={onBack}
+              className="flex items-center gap-1.5 text-sm text-apple-gray hover:text-apple-blue transition-colors duration-200 mb-8 group"
+            >
+              <span className="group-hover:-translate-x-0.5 transition-transform duration-200">←</span>
+              Back
+            </button>
+          )}
           <p className="text-sm font-semibold text-apple-blue tracking-widest uppercase mb-3">
             Gallery
           </p>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight">
             <span className="text-apple-dark">Memorable </span>
             <span className="text-apple-blue">Moments</span>
-          </h2>
+          </h1>
+          <p className="text-apple-gray mt-4 text-base max-w-md">
+            A collection of moments worth keeping.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {posts.map((post, i) => (
-            <PostCard
-              key={post.id}
-              post={post}
-              index={i}
-              onOpen={openLightbox}
-            />
+            <PostCard key={post.id} post={post} index={i} onOpen={openLightbox} />
           ))}
         </div>
 
@@ -278,11 +285,7 @@ export default function Gallery() {
 
       <AnimatePresence>
         {lightbox && (
-          <Lightbox
-            post={lightbox.post}
-            initialIndex={lightbox.index}
-            onClose={closeLightbox}
-          />
+          <Lightbox post={lightbox.post} initialIndex={lightbox.index} onClose={closeLightbox} />
         )}
       </AnimatePresence>
     </section>

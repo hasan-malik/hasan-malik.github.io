@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export default function Nav() {
+export default function Nav({ currentPage = 'home', onNavigate }) {
   const [scrolled, setScrolled] = useState(false)
+  const isGallery = currentPage === 'gallery'
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -12,25 +13,25 @@ export default function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || isGallery
           ? 'bg-apple-bg/85 backdrop-blur-md border-b border-apple-border'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
+        <button
+          onClick={() => onNavigate('home')}
           className="text-apple-dark font-bold text-lg tracking-tight hover:text-apple-blue transition-colors duration-200"
         >
           HM
-        </a>
+        </button>
+
         <div className="flex items-center gap-8">
-          {[
-            { label: 'Work',       href: '#work'       },
-            { label: 'Experience', href: '#experience' },
-            { label: 'Recognition',href: '#recognition'},
-            { label: 'Gallery',    href: '#gallery'    },
-            { label: 'Contact',    href: '#contact'    },
+          {!isGallery && [
+            { label: 'Work',        href: '#work'        },
+            { label: 'Experience',  href: '#experience'  },
+            { label: 'Recognition', href: '#recognition' },
+            { label: 'Contact',     href: '#contact'     },
           ].map(({ label, href }) => (
             <a
               key={label}
@@ -40,6 +41,16 @@ export default function Nav() {
               {label}
             </a>
           ))}
+
+          <button
+            onClick={() => onNavigate(isGallery ? 'home' : 'gallery')}
+            className={`text-sm font-medium transition-colors duration-200 hidden sm:block ${
+              isGallery ? 'text-apple-blue' : 'text-apple-gray hover:text-apple-dark'
+            }`}
+          >
+            Gallery
+          </button>
+
           <a
             href="/resume.pdf"
             target="_blank"
