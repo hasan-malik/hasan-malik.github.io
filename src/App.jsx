@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Stars from './components/Stars'
 import Nav from './components/Nav'
@@ -18,32 +18,33 @@ const pageVariants = {
 }
 
 function App() {
-  const [page, setPage] = useState('home')
-
   return (
     <div className="bg-apple-bg min-h-screen relative">
       <Stars />
       <div className="relative z-10">
-        <Nav currentPage={page} onNavigate={setPage} />
+        <Nav />
 
         <AnimatePresence mode="wait">
-          {page === 'home' ? (
-            <motion.div key="home" variants={pageVariants} initial="initial" animate="animate" exit="exit">
-              <main>
-                <Hero />
-                <About />
-                <Projects />
-                <Experience />
-                <Achievements />
-                <Skills />
-              </main>
-              <Contact />
-            </motion.div>
-          ) : (
-            <motion.div key="gallery" variants={pageVariants} initial="initial" animate="animate" exit="exit">
-              <Gallery onBack={() => setPage('home')} />
-            </motion.div>
-          )}
+          <Routes>
+            <Route path="/" element={
+              <motion.div key="home" variants={pageVariants} initial="initial" animate="animate" exit="exit">
+                <main>
+                  <Hero />
+                  <About />
+                  <Projects />
+                  <Experience />
+                  <Achievements />
+                  <Skills />
+                </main>
+                <Contact />
+              </motion.div>
+            } />
+            <Route path="/gallery" element={
+              <motion.div key="gallery" variants={pageVariants} initial="initial" animate="animate" exit="exit">
+                <Gallery />
+              </motion.div>
+            } />
+          </Routes>
         </AnimatePresence>
       </div>
     </div>

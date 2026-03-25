@@ -274,7 +274,7 @@ function PostCard({ post, index, onOpen }) {
 
 // ─── GALLERY SECTION ─────────────────────────────────────────────────────────
 
-export default function Gallery({ onBack }) {
+export default function Gallery() {
   const [lightbox, setLightbox] = useState(null)
 
   const openLightbox  = (post, index) => setLightbox({ post, index })

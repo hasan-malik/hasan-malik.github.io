@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-export default function Nav({ currentPage = 'home', onNavigate }) {
+export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
-  const isGallery = currentPage === 'gallery'
+  const location = useLocation()
+  const navigate = useNavigate()
+  const isGallery = location.pathname === '/gallery'
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -21,7 +24,7 @@ export default function Nav({ currentPage = 'home', onNavigate }) {
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <button
-            onClick={() => onNavigate('home')}
+            onClick={() => navigate('/')}
             className="text-apple-dark font-bold text-lg tracking-tight hover:text-apple-blue transition-colors duration-200"
           >
             HM
@@ -51,7 +54,7 @@ export default function Nav({ currentPage = 'home', onNavigate }) {
           ))}
 
           <button
-            onClick={() => onNavigate(isGallery ? 'home' : 'gallery')}
+            onClick={() => navigate(isGallery ? '/' : '/gallery')}
             className={`text-sm font-medium transition-colors duration-200 hidden sm:block ${
               isGallery ? 'text-apple-blue' : 'text-apple-gray hover:text-apple-dark'
             }`}
