@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Stars from './components/Stars'
+import CursorTrail from './components/CursorTrail'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="bg-apple-bg min-h-screen relative">
       <Stars />
+      <CursorTrail />
       <div className="relative z-10">
         <Nav />
 
