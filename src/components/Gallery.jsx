@@ -20,9 +20,9 @@ const posts = [
   },
   {
     id: 3,
-    caption: 'Yet another caption',
-    date: 'Month Year',
-    images: Array.from({ length: 2 }, (_, i) => `/gallery/post3/${i + 1}.jpg`),
+    caption: 'Stole the DRS sign.',
+    date: 'June 15, 2025',
+    images: Array.from({ length: 9 }, (_, i) => `/gallery/post3/${i + 1}.jpg`),
   },
 ]
 
