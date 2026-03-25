@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import GitHubActivity from './GitHubActivity'
 
 const badges = [
   { label: '4.00 GPA',            sub: 'University of Toronto'       },
@@ -60,7 +59,7 @@ export default function Hero() {
 
         <motion.div
           {...fadeUp(0.4)}
-          className="flex items-center gap-6 mb-8"
+          className="flex items-center gap-6"
         >
           <a
             href="#work"
@@ -84,10 +83,6 @@ export default function Hero() {
           >
             LinkedIn ↗
           </a>
-        </motion.div>
-
-        <motion.div {...fadeUp(0.5)} className="max-w-sm">
-          <GitHubActivity />
         </motion.div>
 
       </div>
