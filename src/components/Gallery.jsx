@@ -24,6 +24,24 @@ const posts = [
     date: 'June 15, 2025',
     images: Array.from({ length: 9 }, (_, i) => `/gallery/post3/${i + 1}.jpg`),
   },
+  {
+    id: 4,
+    caption: "Hasn't hit home yet.",
+    date: 'March 11, 2024',
+    images: Array.from({ length: 10 }, (_, i) => `/gallery/post4/${i + 1}.jpg`),
+  },
+  {
+    id: 5,
+    caption: 'Fastest lap yet',
+    date: 'February 24, 2024',
+    images: Array.from({ length: 10 }, (_, i) => `/gallery/post5/${i + 1}.jpg`),
+  },
+  {
+    id: 6,
+    caption: 'Criminals in the Cricket Council',
+    date: 'February 14, 2024',
+    images: Array.from({ length: 10 }, (_, i) => `/gallery/post6/${i + 1}.jpg`),
+  },
 ]
 
 // ─── PLACEHOLDER ─────────────────────────────────────────────────────────────
