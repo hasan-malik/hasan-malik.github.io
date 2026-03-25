@@ -2,45 +2,64 @@ import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
-// Add your posts here. Images live in /public/gallery/postN/1.jpg etc.
-// Each post should have 8–9 images.
+// Posts are stored in /public/gallery/MMDDYY/ folders (chronological folder names)
+// Images within each folder are 1.jpeg, 2.jpeg, 3.jpeg, etc.
+// Posts displayed in reverse chronological order (newest first)
 
 const posts = [
   {
     id: 1,
-    caption: 'Still chasing it',
-    date: 'January 13, 2026',
-    images: Array.from({ length: 9 }, (_, i) => `/gallery/post1/${i + 1}.jpg`),
+    caption: 'Winter reflections.',
+    date: 'January 31, 2026',
+    images: Array.from({ length: 10 }, (_, i) => `/gallery/013126/${i + 1}.jpeg`),
   },
   {
     id: 2,
-    caption: 'Harmless wrongs.',
-    date: 'February 4, 2024',
-    images: Array.from({ length: 10 }, (_, i) => `/gallery/post2/${i + 1}.jpg`),
+    caption: 'New year, new projects.',
+    date: 'January 21, 2026',
+    images: Array.from({ length: 9 }, (_, i) => `/gallery/012126/${i + 1}.jpeg`),
   },
   {
     id: 3,
     caption: 'Stole the DRS sign.',
     date: 'June 15, 2025',
-    images: Array.from({ length: 9 }, (_, i) => `/gallery/post3/${i + 1}.jpg`),
+    images: Array.from({ length: 9 }, (_, i) => `/gallery/061525/${i + 1}.jpeg`),
   },
   {
     id: 4,
     caption: "Hasn't hit home yet.",
     date: 'March 11, 2024',
-    images: Array.from({ length: 10 }, (_, i) => `/gallery/post4/${i + 1}.jpeg`),
+    images: Array.from({ length: 13 }, (_, i) => `/gallery/031124/${i + 1}.jpeg`),
   },
   {
     id: 5,
     caption: 'Fastest lap yet',
     date: 'February 24, 2024',
-    images: Array.from({ length: 10 }, (_, i) => `/gallery/post5/${i + 11}.jpeg`),
+    images: Array.from({ length: 13 }, (_, i) => `/gallery/022424/${i + 1}.jpeg`),
   },
   {
     id: 6,
     caption: 'Criminals in the Cricket Council',
     date: 'February 14, 2024',
-    images: Array.from({ length: 10 }, (_, i) => `/gallery/post6/${i + 21}.jpeg`),
+    images: Array.from({ length: 5 }, (_, i) => `/gallery/021424/${i + 1}.jpeg`),
+  },
+  {
+    id: 7,
+    caption: 'Memories made.',
+    date: 'January 29, 2024',
+    images: Array.from({ length: 13 }, (_, i) => `/gallery/012924/${i + 1}.jpeg`),
+  },
+  {
+    id: 8,
+    caption: 'Moments worth keeping.',
+    date: 'January 21, 2024',
+    images: Array.from({ length: 12 }, (_, i) => `/gallery/012124/${i + 1}.jpeg`),
+  },
+  {
+    id: 9,
+    caption: 'Where it all began.',
+    date: 'January 3, 2024',
+    images: Array.from({ length: 8 }, (_, i) => `/gallery/010324/${i + 1}.jpeg`),
   },
 ]
 

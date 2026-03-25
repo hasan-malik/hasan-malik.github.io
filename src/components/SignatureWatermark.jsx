@@ -1,58 +1,51 @@
 import { motion, useReducedMotion } from 'framer-motion'
 
-// ─── Hand-traced SVG paths of the Hasan Malik signature ──────────────────────
-// ViewBox: 0 0 1200 580
-// Stroke order follows natural pen movement: H → asan → M → alik → underline × 2 → dot
+// ─── Hand-traced SVG paths of the actual Hasan Malik signature ────────────────
+// ViewBox: 0 0 1000 600
+// Stroke order: H → asan → M → alik → underline → dot
 
 const STROKES = [
   {
-    // H — tall initial upstroke, loop, descends back into the script
-    d: 'M 182 455 C 148 372 108 248 126 162 C 140 104 168 120 172 194 C 178 278 154 372 146 426 C 140 460 155 486 178 490 C 202 494 230 474 256 446',
-    width: 3.5,
-    delay: 0.15,
-    duration: 1.4,
+    // H — tall looping left stroke
+    d: 'M 120 500 Q 100 380 120 280 Q 140 200 180 220 Q 200 240 190 350 Q 180 450 160 500',
+    width: 3.8,
+    delay: 0.12,
+    duration: 1.2,
   },
   {
-    // asan — lowercase cursive, three small loops connecting to M
-    d: 'M 256 446 C 280 420 306 398 338 380 C 360 366 374 372 383 356 C 398 332 394 308 380 328 C 366 348 362 380 382 392 C 404 406 440 388 474 364 C 494 350 506 358 518 342 C 534 320 530 296 516 316 C 502 336 498 368 518 380 C 540 394 576 376 612 352',
+    // asan — connected lowercase script flowing right
+    d: 'M 160 320 Q 180 300 220 310 Q 250 320 270 300 Q 290 280 310 300 Q 330 320 350 310 Q 370 300 390 330 Q 410 360 395 380',
     width: 3.2,
-    delay: 1.28,
-    duration: 1.5,
+    delay: 1.20,
+    duration: 1.3,
   },
   {
-    // M — three tall spires, the tallest strokes in the signature
-    d: 'M 612 352 C 625 326 632 236 641 160 C 649 116 665 134 669 186 C 676 248 672 334 689 302 C 707 266 728 156 744 112 C 758 76 776 96 781 150 C 789 216 783 308 798 276',
-    width: 3.5,
-    delay: 2.55,
+    // M — three tall spires, very prominent peaks
+    d: 'M 395 350 Q 420 300 440 180 Q 455 130 470 160 Q 480 220 485 320 Q 490 280 510 180 Q 525 120 540 160 Q 550 230 555 340 Q 570 300 590 180 Q 605 130 620 160 Q 630 240 635 350',
+    width: 3.8,
+    delay: 2.35,
     duration: 1.0,
   },
   {
-    // alik — flows right, 'l' has a tall ascender, 'k' kicks out
-    d: 'M 798 276 C 812 253 832 270 852 310 C 870 342 875 326 880 300 C 885 274 878 256 871 276 C 864 298 868 334 886 348 C 906 364 930 340 950 308 C 964 286 969 300 971 332 C 974 358 970 386 978 356 C 988 324 996 246 1010 173 C 1018 134 1034 156 1039 204 C 1045 256 1042 318 1058 314',
+    // alik — flows right with tall ascender on 'l', 'k' flourish
+    d: 'M 635 320 Q 660 300 685 320 Q 705 340 710 360 Q 715 310 720 220 Q 725 180 735 200 Q 745 240 750 340 Q 770 320 795 300 Q 815 290 830 340 Q 840 360 820 375',
     width: 3.2,
-    delay: 3.38,
-    duration: 1.1,
+    delay: 3.25,
+    duration: 1.0,
   },
   {
-    // Underline 1 — long diagonal slash through the entire signature
-    d: 'M 108 488 C 318 470 578 458 818 446 C 938 440 1026 436 1080 432',
-    width: 2.8,
-    delay: 4.28,
-    duration: 0.62,
+    // Underline — one long diagonal slash
+    d: 'M 100 520 Q 350 500 600 490 Q 800 480 850 475',
+    width: 3.0,
+    delay: 4.15,
+    duration: 0.7,
   },
   {
-    // Underline 2 — parallel flourish just below
-    d: 'M 238 524 C 446 506 690 494 916 484 C 1028 479 1093 476 1118 474',
-    width: 2.5,
+    // Dot — small terminal mark
+    d: 'M 870 460 L 875 460',
+    width: 7,
     delay: 4.80,
-    duration: 0.52,
-  },
-  {
-    // Dot — small round terminal mark after the underlines
-    d: 'M 1136 452 L 1137 452',
-    width: 8,
-    delay: 5.18,
-    duration: 0.18,
+    duration: 0.15,
   },
 ]
 
