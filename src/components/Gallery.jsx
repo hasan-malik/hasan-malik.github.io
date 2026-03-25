@@ -9,13 +9,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 const posts = [
   {
     id: 1,
-    caption: 'Winter reflections.',
+    caption: 'Harmless wrongs',
     date: 'January 31, 2026',
     images: Array.from({ length: 10 }, (_, i) => `/gallery/013126/${i + 1}.jpeg`),
   },
   {
     id: 2,
-    caption: 'New year, new projects.',
+    caption: 'Still chasing it',
     date: 'January 21, 2026',
     images: Array.from({ length: 9 }, (_, i) => `/gallery/012126/${i + 1}.jpeg`),
   },
@@ -45,19 +45,19 @@ const posts = [
   },
   {
     id: 7,
-    caption: 'Memories made.',
+    caption: 'Winding down.',
     date: 'January 29, 2024',
     images: Array.from({ length: 13 }, (_, i) => `/gallery/012924/${i + 1}.jpeg`),
   },
   {
     id: 8,
-    caption: 'Moments worth keeping.',
+    caption: 'Propaganda done, diplomacy next.',
     date: 'January 21, 2024',
     images: Array.from({ length: 12 }, (_, i) => `/gallery/012124/${i + 1}.jpeg`),
   },
   {
     id: 9,
-    caption: 'Where it all began.',
+    caption: 'The pictures that came two years late.',
     date: 'January 3, 2024',
     images: Array.from({ length: 8 }, (_, i) => `/gallery/010324/${i + 1}.jpeg`),
   },
