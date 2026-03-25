@@ -254,25 +254,10 @@ export default function Gallery({ onBack }) {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="flex items-center gap-1.5 text-sm text-apple-gray hover:text-apple-blue transition-colors duration-200 mb-8 group"
-            >
-              <span className="group-hover:-translate-x-0.5 transition-transform duration-200">←</span>
-              Back
-            </button>
-          )}
-          <p className="text-sm font-semibold text-apple-blue tracking-widest uppercase mb-3">
-            Gallery
-          </p>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight">
-            <span className="text-apple-dark">Memorable </span>
-            <span className="text-apple-blue">Moments</span>
+            <span className="text-apple-dark">A little bit of </span>
+            <span className="text-apple-blue">everything.</span>
           </h1>
-          <p className="text-apple-gray mt-4 text-base max-w-md">
-            A collection of moments worth keeping.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

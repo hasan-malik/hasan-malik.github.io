@@ -19,12 +19,20 @@ export default function Nav({ currentPage = 'home', onNavigate }) {
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button
-          onClick={() => onNavigate('home')}
-          className="text-apple-dark font-bold text-lg tracking-tight hover:text-apple-blue transition-colors duration-200"
-        >
-          HM
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => onNavigate('home')}
+            className="text-apple-dark font-bold text-lg tracking-tight hover:text-apple-blue transition-colors duration-200"
+          >
+            HM
+          </button>
+          {isGallery && (
+            <>
+              <span className="text-apple-border text-lg">/</span>
+              <span className="text-sm font-medium text-apple-gray">Gallery</span>
+            </>
+          )}
+        </div>
 
         <div className="flex items-center gap-8">
           {!isGallery && [
