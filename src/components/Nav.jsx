@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate, useMatch } from 'react-router-dom'
+import { useNavigate, useMatch } from 'react-router-dom'
+
+const NAV_LINKS = [
+  { label: 'Work',        id: 'work'        },
+  { label: 'Experience',  id: 'experience'  },
+  { label: 'Recognition', id: 'recognition' },
+  { label: 'Contact',     id: 'contact'     },
+]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -12,6 +19,18 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToSection = (id) => (e) => {
+    e.preventDefault()
+    if (isGallery) {
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 450)
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -22,12 +41,13 @@ export default function Nav() {
     >
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link
-            to="/"
+          <a
+            href="/"
+            onClick={(e) => { e.preventDefault(); navigate('/') }}
             className="text-apple-dark font-bold text-lg tracking-tight hover:text-apple-blue transition-colors duration-200"
           >
             HM
-          </Link>
+          </a>
           {isGallery && (
             <>
               <span className="text-apple-border text-lg">/</span>
@@ -37,19 +57,15 @@ export default function Nav() {
         </div>
 
         <div className="flex items-center gap-8">
-          {!isGallery && [
-            { label: 'Work',        to: '/#work'        },
-            { label: 'Experience',  to: '/#experience'  },
-            { label: 'Recognition', to: '/#recognition' },
-            { label: 'Contact',     to: '/#contact'     },
-          ].map(({ label, to }) => (
-            <Link
+          {NAV_LINKS.map(({ label, id }) => (
+            <a
               key={label}
-              to={to}
+              href={`#${id}`}
+              onClick={scrollToSection(id)}
               className="text-sm font-medium text-apple-gray hover:text-apple-dark transition-colors duration-200 hidden sm:block"
             >
               {label}
-            </Link>
+            </a>
           ))}
 
           <button

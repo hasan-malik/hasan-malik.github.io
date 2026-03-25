@@ -15,6 +15,3 @@ Personal portfolio website for Hasan Malik — built with React, Vite, Tailwind 
 - Gallery page with lightbox and multi-photo posts
 - Responsive, dark-mode-aware design
 
----
-
-*Built with assistance from [Claude](https://claude.ai) (Anthropic).*
