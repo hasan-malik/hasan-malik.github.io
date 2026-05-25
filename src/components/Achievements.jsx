@@ -12,7 +12,7 @@ const achievements = [
   },
   {
     category: 'ACADEMIC',
-    title: 'GPA 4.00 / 4.00',
+    title: 'GPA 3.98 / 4.00',
     subtitle: 'University of Toronto · UofT Scholar Award · First-Year Representative',
     detail:
       'Differential Calc 96% · Integral Calc 95% · Computer Organization 91% · Theory of Computation 94% · Intro to CS 97% · Software Design 93% · Intro to Philosophy 93%',

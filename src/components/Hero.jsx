@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 const badges = [
-  { label: '4.00 GPA',            sub: 'University of Toronto'       },
+  { label: '3.98 GPA',            sub: 'University of Toronto'       },
   { label: '2× Hackathon Winner', sub: 'Solo + Team'                 },
   { label: 'World Record Holder', sub: "World's Youngest Sports Author" },
   { label: 'Cambridge Award',     sub: 'Highest CS Score in Punjab'  },
