@@ -40,7 +40,7 @@ const achievements = [
   {
     category: 'DEBATE',
     title: 'Harvard MUN Best Delegate',
-    subtitle: 'Harvard YMUN 2022 · Member of Best Delegation',
+    subtitle: 'Harvard MUN 2022 · Member of Best Delegation',
     detail:
       '15 national and international MUN awards across Pakistan, Canada, Bahrain, and Indonesia. Trained 40 juniors to win Best Young Delegation at LUMUN 2023.',
     accent: 'border-l-rose-400',
