@@ -12,9 +12,13 @@ const projects = [
     tech: ['Python', 'JavaScript', 'FastAPI', 'NumPy', 'React'],
     year: '2026',
     gradient: 'from-cyan-900/80 to-sky-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'GitHub ↗', href: 'https://github.com/hasan-malik/TransitSim' },
+      { label: 'Live ↗',   href: 'https://hasan-malik.github.io/TransitSim/' },
+    ],
   },
   {
+    id: 'tensorflow-probability',
     name: 'TensorFlow Probability',
     subtitle: 'Open-Source Contributor',
     badge: 'Open Source',
@@ -25,9 +29,12 @@ const projects = [
     tech: ['Python', 'TensorFlow', 'Open Source'],
     year: '2025',
     gradient: 'from-indigo-900/80 to-blue-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'PR #2023 ↗', href: 'https://github.com/tensorflow/probability/pull/2023' },
+    ],
   },
   {
+    id: 'uc-borrowbox',
     name: 'UC BorrowBox',
     subtitle: 'Residence Peer-to-Peer Exchange',
     badge: 'Full-Stack',
@@ -38,7 +45,10 @@ const projects = [
     tech: ['Railway', 'Node.js', 'Express', 'PostgreSQL', 'React'],
     year: '2025',
     gradient: 'from-rose-900/80 to-pink-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'GitHub ↗', href: 'https://github.com/hasan-malik/UC-BorrowBox' },
+      { label: 'Live ↗',   href: 'https://ucborrowbox.netlify.app' },
+    ],
   },
   {
     name: 'StarTooth',
@@ -51,7 +61,9 @@ const projects = [
     tech: ['TypeScript', 'Next.js', 'React', 'PostgreSQL'],
     year: 'Feb 2026',
     gradient: 'from-sky-900/80 to-blue-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'GitHub ↗', href: 'https://github.com/notjackl3/smilehacks' },
+    ],
   },
   {
     name: 'Sparky',
@@ -64,7 +76,10 @@ const projects = [
     tech: ['SwiftUI', 'SFSpeechRecognizer', 'iOS'],
     year: 'Feb 2026',
     gradient: 'from-emerald-900/80 to-teal-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'GitHub ↗',  href: 'https://github.com/hasan-malik/sparky' },
+      { label: 'Devpost ↗', href: 'https://devpost.com/software/sparky-ykhqn0' },
+    ],
   },
   {
     name: 'Insight',
@@ -77,10 +92,13 @@ const projects = [
     tech: ['SwiftUI', 'Swift', 'AVSpeechFoundation', 'VLM'],
     year: '2025',
     gradient: 'from-fuchsia-900/80 to-purple-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'GitHub ↗',  href: 'https://github.com/hasan-malik/Insight' },
+      { label: 'Devpost ↗', href: 'https://devpost.com/software/insight-t439sl' },
+    ],
   },
   {
-    name: 'BeamerPlus',
+    name: 'Beamer+',
     subtitle: 'Next-Gen Academic Presentations',
     badge: 'Research',
     badgeColor: 'bg-violet-900/60 text-violet-300 border-violet-700',
@@ -90,7 +108,10 @@ const projects = [
     tech: ['Research', 'Open Source', 'Education'],
     year: 'Dec 2025–Present',
     gradient: 'from-violet-900/80 to-purple-900/80',
-    links: [{ label: 'GitHub ↗', href: 'https://github.com/hasan-malik' }],
+    links: [
+      { label: 'GitHub ↗', href: 'https://github.com/chandra-gummaluru/beamer-plus' },
+      { label: 'Live ↗',   href: 'https://app.beamerplus.app' },
+    ],
   },
   {
     name: 'Learn Coding & Animations in Lua',
@@ -132,11 +153,12 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.div
               key={project.name}
+              id={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="group bg-apple-light/60 border border-apple-border rounded-2xl hover:border-apple-blue/40 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden backdrop-blur-sm"
+              className="group bg-apple-light/60 border border-apple-border rounded-2xl hover:border-apple-blue/40 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden backdrop-blur-sm scroll-mt-24"
             >
               {/* Gradient thumbnail */}
               <div className={`h-24 bg-gradient-to-br ${project.gradient} flex items-end px-7 pb-4`}>
