@@ -31,6 +31,7 @@ const projects = [
     gradient: 'from-indigo-900/80 to-blue-900/80',
     links: [
       { label: 'PR #2023 ↗', href: 'https://github.com/tensorflow/probability/pull/2023' },
+      { label: 'PR #2024 ↗', href: 'https://github.com/tensorflow/probability/pull/2024' },
     ],
   },
   {
