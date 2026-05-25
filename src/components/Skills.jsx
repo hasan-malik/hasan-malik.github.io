@@ -11,15 +11,21 @@ const skillGroups = [
   {
     category: 'Frameworks & Libraries',
     skills: [
-      'React.js', 'SwiftUI', 'TailwindCSS', 'Three.js',
-      'Flask', 'PyTorch', 'Java Swing',
+      'React.js', 'SwiftUI', 'Node.js', 'Express', 'TailwindCSS', 'Three.js',
+      'Flask', 'FastAPI', 'PydanticAI', 'Hono', 'TanStack Query', 'PyTorch', 'Java Swing',
     ],
   },
   {
-    category: 'Tools & Platforms',
+    category: 'Databases & ORMs',
     skills: [
-      'PostgreSQL', 'Supabase', 'Git', 'Vite',
-      'SFSpeechRecognizer', 'Roblox Studio', 'PressBooks',
+      'PostgreSQL', 'Supabase', 'Drizzle', 'Zod',
+    ],
+  },
+  {
+    category: 'Tools & Infrastructure',
+    skills: [
+      'GitHub Actions', 'Docker', 'Temporal', 'Railway',
+      'Git', 'Vite', 'SFSpeechRecognizer', 'Roblox Studio', 'PressBooks',
     ],
   },
 ]
