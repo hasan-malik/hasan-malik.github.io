@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion'
 
 const experiences = [
   {
+    id: 'matter-lab',
     role: 'AI Research Intern',
     org: 'The Matter Lab · Prof. Alan Aspuru-Guzik',
     type: 'Research',
@@ -14,6 +15,7 @@ const experiences = [
     ],
   },
   {
+    id: 'flippilot',
     role: 'Software Engineer (Promoted from Intern)',
     org: 'FlipPilot · Recipient of Best Intern Award',
     type: 'Industry',
@@ -27,6 +29,7 @@ const experiences = [
     ],
   },
   {
+    id: 'beamer-plus',
     role: 'Software Engineer',
     org: 'Department of Computer Science, UofT · Prof. Chandra Gummaluru',
     type: 'Research',
@@ -67,7 +70,11 @@ function TimelineEntry({ exp, index, isLast }) {
   const isInView = useInView(ref, { once: true, margin: '-80px 0px' })
 
   return (
-    <div ref={ref} className="relative flex gap-8">
+    <div
+      ref={ref}
+      id={exp.id}
+      className="relative flex gap-8 scroll-mt-24"
+    >
       {/* Left: dot + line */}
       <div className="relative flex flex-col items-center w-4 shrink-0 mt-1">
         {/* Dot */}
