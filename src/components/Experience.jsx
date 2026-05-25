@@ -3,6 +3,42 @@ import { motion, useInView } from 'framer-motion'
 
 const experiences = [
   {
+    role: 'AI Research Intern',
+    org: 'The Matter Lab · Prof. Alan Aspuru-Guzik',
+    type: 'Research',
+    typeColor: 'bg-violet-900/60 text-violet-300 border-violet-700',
+    period: 'May 2026 – Present',
+    bullets: [
+      'Productionized a 55-package agentic stack on local & HPC by building a Docker/Apptainer runtime',
+      'Accelerated Jetson VLM inference from 3.7s to 1.2s by profiling GPU telemetry and tuning power modes',
+    ],
+  },
+  {
+    role: 'Software Engineer (Promoted from Intern)',
+    org: 'FlipPilot · Recipient of Best Intern Award',
+    type: 'Industry',
+    typeColor: 'bg-sky-900/60 text-sky-300 border-sky-700',
+    period: 'March 2026 – Present',
+    bullets: [
+      'Developed industry-specific e-commerce browsing by building a multi-stage async orchestration pipeline',
+      'Automated production AI benchmarking across 3 analysis stages via a parallel 3-LLM pipeline & dashboard',
+      'Eliminated a 200s pipeline telemetry stall by building a 7-stage real-time event streaming layer',
+      'Corrected AI valuation anomalies, securing 100% data ingestion fidelity by adding an enrichment scrape',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    org: 'Department of Computer Science, UofT · Prof. Chandra Gummaluru',
+    type: 'Research',
+    typeColor: 'bg-violet-900/60 text-violet-300 border-violet-700',
+    period: 'Dec 2025 – Present',
+    bullets: [
+      'Built a client-side rendering engine enabling viewer-controlled slide navigation independent of the screen-share',
+      'Synchronized live presenter annotations across distributed sessions through a debounced, stateful event layer',
+      'Shipped a split-view architecture rendering annotation and media assets by building parallel graphics pipelines',
+    ],
+  },
+  {
     role: 'Front-End Developer',
     org: 'Techlogix',
     type: 'Internship',
@@ -11,17 +47,6 @@ const experiences = [
     bullets: [
       'Landed a competitive summer internship after completing only first year',
       'Designed and built the front-end for a Student Information System — login/auth, dashboards, React-Router navigation, and a mock JSON backend for testing',
-    ],
-  },
-  {
-    role: 'Research Developer',
-    org: 'BeamerPlus · Prof. Chandra Gummaluru',
-    type: 'Research',
-    typeColor: 'bg-violet-900/60 text-violet-300 border-violet-700',
-    period: 'Dec 2025 – Present',
-    bullets: [
-      'Designing a next-generation slideshow tool to redefine academic and educational presentations',
-      'Built-in graphical tools, coding console, AI-summarized Q&A, split-view multi-slide display, and video recording',
     ],
   },
   {
