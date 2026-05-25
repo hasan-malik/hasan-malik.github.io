@@ -48,7 +48,7 @@ const experiences = [
     typeColor: 'bg-emerald-900/60 text-emerald-300 border-emerald-700',
     period: 'Jul – Aug 2025',
     bullets: [
-      'Landed a competitive summer internship after completing only first year',
+      'Landed a summer internship after completing only first year',
       'Designed and built the front-end for a Student Information System — login/auth, dashboards, React-Router navigation, and a mock JSON backend for testing',
     ],
   },

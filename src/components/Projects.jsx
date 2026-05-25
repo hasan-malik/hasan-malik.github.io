@@ -27,7 +27,7 @@ const projects = [
     description:
       'Expanded the BFGS optimization engine by engineering configurable line-search tuning parameters, and validated parameter forwarding across 2 optimization trajectories using Rosenbrock convergence tests.',
     tech: ['Python', 'TensorFlow', 'Open Source'],
-    year: '2025',
+    year: 'May 2026',
     gradient: 'from-indigo-900/80 to-blue-900/80',
     links: [
       { label: 'PR #2023 ↗', href: 'https://github.com/tensorflow/probability/pull/2023' },
@@ -44,7 +44,7 @@ const projects = [
     description:
       'Cut duplicate-purchase waste across 3 residence halls via a peer-to-peer exchange supporting 3 transaction types. Standardized an 8-view crossplatform UI by codifying Apple’s 11-step type scale and color system into design tokens.',
     tech: ['Railway', 'Node.js', 'Express', 'PostgreSQL', 'React'],
-    year: '2025',
+    year: 'May 2026',
     gradient: 'from-rose-900/80 to-pink-900/80',
     links: [
       { label: 'GitHub ↗', href: 'https://github.com/hasan-malik/UC-BorrowBox' },
@@ -91,7 +91,7 @@ const projects = [
     description:
       'An iOS conversational agent for blind users, running VLM inference at 1Hz on scene-change to describe surroundings. Enables hands-free GPS navigation with four phases of haptic cues by polling waypoint distance every 2s.',
     tech: ['SwiftUI', 'Swift', 'AVSpeechFoundation', 'VLM'],
-    year: '2025',
+    year: 'Mar 2026',
     gradient: 'from-fuchsia-900/80 to-purple-900/80',
     links: [
       { label: 'GitHub ↗',  href: 'https://github.com/hasan-malik/Insight' },
