@@ -2,19 +2,29 @@ import { motion } from 'framer-motion'
 
 const roles = [
   {
-    icon: '📱',
-    title: 'iOS Developer',
-    desc: 'Swift & SwiftUI — building native apps that feel at home on Apple platforms.',
+    icon: '🤖',
+    title: 'Agentic AI',
+    desc: "FlipPilot's e-commerce agent and Aspuru-Guzik's Matter Lab.",
   },
   {
     icon: '⚡',
-    title: 'Full-Stack Engineer',
-    desc: 'React, Flask, PostgreSQL — end-to-end products, from database to pixel.',
+    title: 'Full-Stack Developer',
+    desc: 'Shipped end-to-end web and iOS products, database to pixel.',
+  },
+  {
+    icon: '🏆',
+    title: 'Hackathons',
+    desc: 'Sparky (Winner, Western) and StarTooth (3rd, SmileHacks).',
   },
   {
     icon: '🔬',
-    title: 'Researcher',
-    desc: 'Collaborating with professors to rethink how knowledge is built and shared.',
+    title: 'ML Research',
+    desc: 'Tuning VLM inference on Jetson at the Matter Lab.',
+  },
+  {
+    icon: '📊',
+    title: 'Data Analysis',
+    desc: 'A 620K-trip Toronto transit digital twin in TransitSim.',
   },
 ]
 
@@ -35,14 +45,16 @@ export default function About() {
             <span className="text-apple-blue">Me</span>
           </h2>
           <p className="text-lg text-apple-gray font-light max-w-2xl mx-auto leading-relaxed">
-            CS student at the University of Toronto — building at the intersection of iOS,
-            full-stack, and research. I love shipping products that feel effortless to use:
-            the kind where the engineering is invisible and the experience is everything.
-            First-Year Representative. Always chasing the next hard problem.
+            CS student at the University of Toronto, working across AI infrastructure,
+            full-stack, and iOS. Currently building agentic AI pipelines at FlipPilot
+            (Best Intern Award) and productionizing a 55-package agentic stack at
+            Prof. Alan Aspuru-Guzik's Matter Lab. I love shipping products where the
+            engineering is invisible and the experience is everything. Always chasing
+            the next hard problem.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {roles.map((role, i) => (
             <motion.div
               key={role.title}
